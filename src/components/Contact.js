@@ -56,7 +56,11 @@ export default function Contact() {
                                 method="POST"
                                 data-netlify="true"
                             >
-                                <input type="hidden" name="contact" value="contact" />
+                                <input
+                                    type="hidden"
+                                    name="contact"
+                                    value="contact"
+                                />
                                 <div className="py-0">
                                     <label
                                         htmlFor="fullName"
@@ -147,8 +151,13 @@ export default function Contact() {
                     <h1 className="text-3xl font-bold text-white opacity-50 mb-2 tracking-widest font-heading">
                         CONTACT
                     </h1>
-                    {/* <form onSubmit={handleSubmit} name="contact">
-                        
+                    <form
+                        onSubmit={handleSubmit}
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                    >
+                        <input type="hidden" name="contact" value="contact" />
                         <div className="mb-4">
                             <label
                                 className="block text-white opacity-50 text-sm font-bold mb-2 tracking-[.05em]"
@@ -218,7 +227,7 @@ export default function Contact() {
                                 SEND
                             </button>
                         </div>
-                    </form> */}
+                    </form>
                 </div>
 
                 <SocialMobile />
