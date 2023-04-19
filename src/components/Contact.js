@@ -25,17 +25,7 @@ export default function Contact() {
             [e.target.name]: e.target.value,
         })
     }
-    const handleSubmit = (e) => {
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({ 'form-name': 'contact', ...this.state }),
-        })
-            .then(() => alert('Success!'))
-            .catch((error) => alert(error))
-
-        e.preventDefault()
-    }
+    
     console.log('form: ', form)
     return (
         <div>
@@ -51,7 +41,7 @@ export default function Contact() {
                             </h1>
                             <form
                                 className="gap-4 text-3xl"
-                                onSubmit={handleSubmit}
+                                
                                 name="contact"
                                 netlify
                                 netlify-honeypot="bot-field"
