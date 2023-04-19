@@ -56,6 +56,7 @@ export default function Contact() {
                                 method="POST"
                                 data-netlify="true"
                             >
+                                <input type="hidden" name="contact" value="contact" />
                                 <div className="py-0">
                                     <label
                                         htmlFor="fullName"
