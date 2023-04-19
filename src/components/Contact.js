@@ -52,7 +52,16 @@ export default function Contact() {
                             <form
                                 className="gap-4 text-3xl"
                                 onSubmit={handleSubmit}
+                                name="contact"
+                                netlify
+                                netlify-honeypot="bot-field"
+                                hidden
                             >
+                                <input
+                                    type="hidden"
+                                    name="form-name"
+                                    value="contact"
+                                />
                                 <div className="py-0">
                                     <label
                                         htmlFor="fullName"
@@ -143,7 +152,13 @@ export default function Contact() {
                     <h1 className="text-3xl font-bold text-white opacity-50 mb-2 tracking-widest font-heading">
                         CONTACT
                     </h1>
-                    <form>
+                    <form
+                        name="contact"
+                        netlify
+                        netlify-honeypot="bot-field"
+                        hidden
+                    >
+                        <input type="hidden" name="form-name" value="contact" />
                         <div className="mb-4">
                             <label
                                 className="block text-white opacity-50 text-sm font-bold mb-2 tracking-[.05em]"
