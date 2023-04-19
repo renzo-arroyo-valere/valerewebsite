@@ -45,7 +45,7 @@ export default function Contact() {
                                 name="contact"
                                 netlify
                                 netlify-honeypot="bot-field"
-                                hidden
+                               
                             >
                                 <input
                                     type="hidden"
@@ -146,7 +146,7 @@ export default function Contact() {
                         name="contact"
                         netlify
                         netlify-honeypot="bot-field"
-                        hidden
+                        
                     >
                         <input type="hidden" name="form-name" value="contact" />
                         <div className="mb-4">
