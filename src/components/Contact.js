@@ -25,7 +25,7 @@ export default function Contact() {
             [e.target.name]: e.target.value,
         })
     }
-    
+
     console.log('form: ', form)
     return (
         <div>
@@ -41,17 +41,11 @@ export default function Contact() {
                             </h1>
                             <form
                                 className="gap-4 text-3xl"
-                                
                                 name="contact"
-                                netlify
-                                netlify-honeypot="bot-field"
-                               
+                                method="POST"
+                                data-netlify="true"
                             >
-                                <input
-                                    type="hidden"
-                                    name="form-name"
-                                    value="contact"
-                                />
+                                <input type="hidden" name="contact" value="contact" />
                                 <div className="py-0">
                                     <label
                                         htmlFor="fullName"
@@ -144,11 +138,10 @@ export default function Contact() {
                     </h1>
                     <form
                         name="contact"
-                        netlify
-                        netlify-honeypot="bot-field"
-                        
+                        method="POST"
+                        data-netlify="true"
                     >
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="contact" value="contact" />
                         <div className="mb-4">
                             <label
                                 className="block text-white opacity-50 text-sm font-bold mb-2 tracking-[.05em]"
