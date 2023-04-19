@@ -146,7 +146,7 @@ export default function Contact() {
                     <h1 className="text-3xl font-bold text-white opacity-50 mb-2 tracking-widest font-heading">
                         CONTACT
                     </h1>
-                    <form onSubmit={handleSubmit} name="contact">
+                    {/* <form onSubmit={handleSubmit} name="contact">
                         
                         <div className="mb-4">
                             <label
@@ -217,7 +217,7 @@ export default function Contact() {
                                 SEND
                             </button>
                         </div>
-                    </form>
+                    </form> */}
                 </div>
 
                 <SocialMobile />
