@@ -25,7 +25,17 @@ export default function Contact() {
             [e.target.name]: e.target.value,
         })
     }
+    const handleSubmit = (e) => {
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact', ...this.state }),
+        })
+            .then(() => alert('Success!'))
+            .catch((error) => alert(error))
 
+        e.preventDefault()
+    }
     console.log('form: ', form)
     return (
         <div>
@@ -41,11 +51,16 @@ export default function Contact() {
                             </h1>
                             <form
                                 className="gap-4 text-3xl"
+                                onSubmit={handleSubmit}
                                 name="contact"
                                 method="POST"
                                 data-netlify="true"
                             >
-                                <input type="hidden" name="contact" value="contact" />
+                                <input
+                                    type="hidden"
+                                    name="contact"
+                                    value="contact"
+                                />
                                 <div className="py-0">
                                     <label
                                         htmlFor="fullName"
@@ -136,16 +151,16 @@ export default function Contact() {
                     <h1 className="text-3xl font-bold text-white opacity-50 mb-2 tracking-widest font-heading">
                         CONTACT
                     </h1>
-                    <form
-                        name="contact"
-                        method="POST"
-                        data-netlify="true"
-                    >
-                        <input type="hidden" name="contact" value="contact" />
+                    <form onSubmit={handleSubmit} name="contact">
+                        <input
+                            type="hidden"
+                            name="contact"
+                            value="contact"
+                        />
                         <div className="mb-4">
                             <label
                                 className="block text-white opacity-50 text-sm font-bold mb-2 tracking-[.05em]"
-                                htmlFor="full-name"
+                                htmlFor="fullName"
                             >
                                 FULL NAME
                             </label>
