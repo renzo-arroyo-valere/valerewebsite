@@ -1,0 +1,90 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.carousel {
+    width: 1200px;
+    overflow: hidden;
+}
+
+.slide {
+    transform: scale(1);
+    width: 250px;
+    transition: transform 300ms;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    position: relative;
+    -webkit-transition: transform 300ms;
+    -moz-transition: transform 300ms;
+    -ms-transition: transform 300ms;
+    -o-transition: transform 300ms;
+}
+.slide img {
+    border-radius: 40px;
+    width: max-content;
+    height: 220px;
+    /* margin: 2; */
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+.slide:focus-within {
+    outline: none;
+    border: none;
+}
+.activeSlide {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 300ms;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    z-index: 3;
+    -webkit-transform: scale(1);
+    -webkit-transition: transform 300ms;
+    -moz-transition: transform 300ms;
+    -ms-transition: transform 300ms;
+    -o-transition: transform 300ms;
+}
+.nextSlide {
+    transform: scale(0.856);
+    opacity: 1;
+    transition: transform 300ms;
+    margin-left: -9rem;
+    -webkit-transform: scale(0.856);
+    -moz-transform: scale(0.856);
+    -ms-transform: scale(0.856);
+    -o-transform: scale(0.856);
+    z-index: 2;
+}
+
+.thirdSlide {
+    transform: scale(0.657);
+    opacity: 0.7;
+    margin-left: -20rem;
+    transition: transform 300ms;
+    -webkit-transform: scale(0.657);
+    -moz-transform: scale(0.657);
+    -ms-transform: scale(0.657);
+    -o-transform: scale(0.657);
+    z-index: 1;
+    -webkit-transition: transform 300ms;
+    -moz-transition: transform 300ms;
+    -ms-transition: transform 300ms;
+    -o-transition: transform 300ms;
+}
+
+.fourthSlide {
+    transform: scale(0.486);
+    opacity: 0.7;
+    margin-left: -32rem;
+    transition: transform 300ms;
+    -webkit-transform: scale(0.48);
+    -moz-transform: scale(0.48);
+    -ms-transform: scale(0.48);
+    -o-transform: scale(0.48);
+    z-index: 0;
+}

@@ -1,0 +1,38 @@
+@tailwind base;
+@font-face {
+    font-family: 'AvenirNextLTPro-Demi';
+    font-style: normal;
+    src: local(''),
+        url('/src/assets/fonts/AvenirNextLTPro-Demi.ttf') format('truetype');
+
+    font-family: 'AvenirNextLTPro-Bold';
+    font-style: bold;
+    src: local(''),
+        url('/src/assets/fonts/AvenirNextLTPro-Bold.ttf') format('truetype');
+}
+
+@layer base {
+    html {
+        @apply font-sans;
+    }
+}
+/* styles.css */
+@layer utilities {
+    .scrollbar-hidden {
+        @apply overflow-y-auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+/* html {
+    font-family: 'AvenirNextLTPro-Demi', sans-serif;
+    font-family: 'AvenirNextLTPro-Bold', sans-serif;
+} */

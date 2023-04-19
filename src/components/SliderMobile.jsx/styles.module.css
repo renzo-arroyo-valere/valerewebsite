@@ -1,0 +1,20 @@
+/*Projects styles*/
+.slider{
+    width: 90%;
+}
+.project{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 16px;
+}
+.dots{
+    padding-top: 48px !important;
+
+}
+.dots li{
+    margin:0 16px !important;
+}
+.dots button::before{
+    font-size: 1rem !important;
+    color:#efefef !important;
+}
